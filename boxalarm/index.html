@@ -13,7 +13,7 @@
     <div class="mark" aria-hidden="true">BA</div>
     <h1>Box Alarm</h1>
     <p class="lede">Know your first-due before the tones drop. Your company's run book, a verified map of the district, and a few minutes of practice a day.</p>
-    <span class="badge">Private beta on TestFlight · iPhone and iPad</span>
+    <a class="badge" href="#join">Join the TestFlight beta · iPhone and iPad</a>
     <div class="hero-shots">
       <img src="img/daily5-card.jpg" alt="Daily 5: call over the run to Martin Luther King Jr Ave and V St SE, then check it against the card">
       <img src="img/guide-home.jpg" alt="The Guide home screen with Daily 5 and the training drills">
@@ -21,7 +21,7 @@
     </div>
   </header>
   <nav class="top">
-    <a href="#guide">The Guide</a><a href="#drills">Drills</a><a href="#map">Live map</a><a href="#arcade">Take Your Runs</a><a href="#board">Runs on the board</a><a href="#trust">How it's built</a>
+    <a href="#guide">The Guide</a><a href="#drills">Drills</a><a href="#map">Live map</a><a href="#arcade">Take Your Runs</a><a href="#board">Runs on the board</a><a href="#trust">How it's built</a><a href="#join">Join the beta</a>
   </nav>
 
   <main>
@@ -246,6 +246,30 @@
       <h2>Bring your company's book</h2>
       <p>The Guide is built around Engine 15 today. The same system can be set up for any company with an information book. If you'd like it for your house, get in touch: <a href="mailto:61.baroque.finial@icloud.com">61.baroque.finial@icloud.com</a>.</p>
     </section>
+
+    <section id="join">
+      <p class="kicker">Private beta</p>
+      <h2>Sign up for TestFlight</h2>
+      <p class="intro">Box Alarm is in a private beta for DC Fire and EMS members. Fill this in and Anthony will send you a TestFlight invitation.</p>
+      <form class="card signup" id="signup" novalidate>
+        <label for="su-name">Name</label>
+        <input id="su-name" name="name" autocomplete="name" placeholder="e.g. FF Jane Smith" required>
+        <label for="su-assignment">Assignment</label>
+        <input id="su-assignment" name="assignment" placeholder="e.g. Engine 15, B shift" required>
+        <label for="su-email">Personal email for your Apple Account</label>
+        <input id="su-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="the email you use for the App Store" required>
+        <p class="hint">TestFlight sends the invitation to this address, so use the email you sign in to the App Store with. Please don't use a department email.</p>
+        <p class="error" id="su-error" role="alert" hidden></p>
+        <button type="submit">Send my sign-up</button>
+        <p class="hint">This opens your email app with everything filled in. Tap <b>Send</b> to finish. Your details go only to Anthony and are used only for the TestFlight invitation.</p>
+      </form>
+      <div class="card signup-done" id="signup-done" hidden>
+        <h3>Almost done: tap Send in your email app</h3>
+        <p>If your email app didn't open, copy this and email it to <b>61.baroque.finial@icloud.com</b>:</p>
+        <pre id="su-text"></pre>
+        <button type="button" id="su-copy">Copy</button>
+      </div>
+    </section>
   </main>
 
   <footer>© 2026 Anthony Srebnick · <a href="mailto:61.baroque.finial@icloud.com">Contact</a> · <a href="../index.html">Tone Out</a></footer>
@@ -259,6 +283,28 @@
       img.addEventListener('click', () => { big.src = img.src; big.alt = img.alt; zoom.showModal(); });
     });
     zoom.addEventListener('click', () => zoom.close());
+
+    const to = '61.baroque.finial@icloud.com';
+    const form = document.getElementById('signup');
+    const err = document.getElementById('su-error');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = form.name.value.trim(), assignment = form.assignment.value.trim(), email = form.email.value.trim();
+      let problem = '';
+      if (!name) problem = 'Please enter your name.';
+      else if (!assignment) problem = 'Please enter your assignment.';
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) problem = 'Please enter a valid email address.';
+      err.textContent = problem; err.hidden = !problem;
+      if (problem) return;
+      const body = `Box Alarm TestFlight sign-up\n\nName: ${name}\nAssignment: ${assignment}\nApple Account email: ${email}\n`;
+      document.getElementById('su-text').textContent = body;
+      document.getElementById('signup-done').hidden = false;
+      location.href = `mailto:${to}?subject=${encodeURIComponent('Box Alarm TestFlight sign-up: ' + name)}&body=${encodeURIComponent(body)}`;
+    });
+    document.getElementById('su-copy').addEventListener('click', e => {
+      const text = document.getElementById('su-text').textContent;
+      navigator.clipboard.writeText(text).then(() => { e.target.textContent = 'Copied'; }, () => {});
+    });
   </script>
 </body>
 </html>

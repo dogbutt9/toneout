@@ -38,7 +38,7 @@ header.hero {
 }
 header.hero h1 { font-size: 46px; margin: 18px 0 6px; letter-spacing: -0.5px; }
 header.hero .lede { font-size: 21px; margin: 0 auto; max-width: 620px; opacity: .92; }
-.badge {
+.badge { text-decoration: none;
   display: inline-block; margin-top: 24px; padding: 10px 20px; border-radius: 999px;
   background: var(--amber); color: var(--amber-ink); font-weight: 700; font-size: 15px;
 }
@@ -55,7 +55,7 @@ nav.top a { color: #fff; text-decoration: none; font-weight: 600; font-size: 15p
 nav.top a:hover { color: var(--amber); }
 
 main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
-section { padding-top: 24px; }
+section { padding-top: 24px; scroll-margin-top: 64px; }
 h2 { font-size: 32px; margin: 40px 0 8px; letter-spacing: -0.3px; }
 h3 { font-size: 21px; margin: 0 0 6px; }
 .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 700; color: var(--accent); margin: 48px 0 0; }
@@ -111,3 +111,20 @@ dialog.zoom img { max-width: 96vw; max-height: 92vh; width: auto; border-radius:
   .grid2, .wide { grid-template-columns: 1fr; }
   h2 { font-size: 27px; }
 }
+
+.signup { display: grid; gap: 8px; max-width: 560px; }
+.signup label { font-weight: 600; font-size: 15px; margin-top: 8px; }
+.signup input {
+  font: inherit; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--paper); color: var(--ink); width: 100%;
+}
+.signup input:focus, .signup button:focus-visible, .signup-done button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.signup button, .signup-done button {
+  font: inherit; font-weight: 700; margin-top: 12px; padding: 13px 20px; border: 0; border-radius: 999px;
+  background: var(--amber); color: var(--amber-ink); cursor: pointer; justify-self: start;
+}
+.signup .hint { font-size: 14px; color: var(--muted); margin: 2px 0 0; }
+.signup .error { color: #d9483b; font-weight: 600; margin: 4px 0 0; }
+.signup-done { max-width: 560px; }
+.signup-done pre { white-space: pre-wrap; background: var(--paper); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+[hidden] { display: none !important; }
