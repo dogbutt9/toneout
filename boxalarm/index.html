@@ -260,7 +260,7 @@
         <input id="su-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="the email you use for the App Store" required>
         <p class="hint">TestFlight sends the invitation to this address, so use the email you sign in to the App Store with. Please don't use a department email.</p>
         <p class="error" id="su-error" role="alert" hidden></p>
-        <button type="submit">Send my sign-up</button>
+        <a class="send" id="su-send" href="mailto:61.baroque.finial@icloud.com">Send my sign-up</a>
         <p class="hint">This opens your email app with everything filled in. Tap <b>Send</b> to finish. Your details go only to Anthony and are used only for the TestFlight invitation.</p>
       </form>
       <div class="card signup-done" id="signup-done" hidden>
@@ -287,20 +287,27 @@
     const to = '61.baroque.finial@icloud.com';
     const form = document.getElementById('signup');
     const err = document.getElementById('su-error');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
+    const send = document.getElementById('su-send');
+    // A real link the person taps is what iPhone Safari reliably opens in Mail.
+    function draft() {
       const name = form.name.value.trim(), assignment = form.assignment.value.trim(), email = form.email.value.trim();
       let problem = '';
       if (!name) problem = 'Please enter your name.';
       else if (!assignment) problem = 'Please enter your assignment.';
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) problem = 'Please enter a valid email address.';
-      err.textContent = problem; err.hidden = !problem;
-      if (problem) return;
       const body = `Box Alarm TestFlight sign-up\n\nName: ${name}\nAssignment: ${assignment}\nApple Account email: ${email}\n`;
+      send.href = `mailto:${to}?subject=${encodeURIComponent('Box Alarm TestFlight sign-up: ' + name)}&body=${encodeURIComponent(body)}`;
+      return { problem, body };
+    }
+    form.addEventListener('input', () => { draft(); err.hidden = true; });
+    send.addEventListener('click', e => {
+      const { problem, body } = draft();
+      err.textContent = problem; err.hidden = !problem;
+      if (problem) { e.preventDefault(); return; }
       document.getElementById('su-text').textContent = body;
       document.getElementById('signup-done').hidden = false;
-      location.href = `mailto:${to}?subject=${encodeURIComponent('Box Alarm TestFlight sign-up: ' + name)}&body=${encodeURIComponent(body)}`;
     });
+    form.addEventListener('submit', e => { e.preventDefault(); send.click(); });
     document.getElementById('su-copy').addEventListener('click', e => {
       const text = document.getElementById('su-text').textContent;
       navigator.clipboard.writeText(text).then(() => { e.target.textContent = 'Copied'; }, () => {});
