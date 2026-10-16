@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Box Alarm: Know Your First-Due</title>
+  <meta name="description" content="A study app for DC firefighters. The Guide teaches your company's response area run by run, from your own information book, with a verified map and practice runs.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f5b14c'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial' font-weight='800' font-size='28' text-anchor='middle' fill='%233a2606'%3EBA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="mark" aria-hidden="true">BA</div>
+    <h1>Box Alarm</h1>
+    <p class="lede">Know your first-due before the tones drop. Your company's run book, a verified map of the district, and a few minutes of practice a day.</p>
+    <a class="badge" href="#join">Join the TestFlight beta · iPhone and iPad</a>
+    <div class="hero-shots">
+      <img src="img/daily5-card.jpg" alt="Daily 5: call over the run to Martin Luther King Jr Ave and V St SE, then check it against the card">
+      <img src="img/guide-home.jpg" alt="The Guide home screen with Daily 5 and the training drills">
+      <img src="img/call-map.jpg" alt="Full-screen call map with hydrants, block numbers and one-way arrows">
+    </div>
+  </header>
+  <nav class="top">
+    <a href="#guide">The Guide</a><a href="#drills">Drills</a><a href="#map">Live map</a><a href="#arcade">Take Your Runs</a><a href="#board">Runs on the board</a><a href="#trust">How it's built</a><a href="#join">Join the beta</a>
+  </nav>
+
+  <main>
+    <section>
+      <p class="kicker">Made by a firefighter</p>
+      <h2>Learning your district shouldn't depend on luck</h2>
+      <p class="intro">A new member is expected to know the first-due well enough to go from quarters to any box without a map: read the address, picture the block, call the turns. Most of us learn it the slow way, from the run book, a few drives, and whatever calls happen to come in.</p>
+      <p>Box Alarm was built at Engine 15 to make that faster and more complete. It puts the company's own information book, a source-verified map of the district and a driving simulator in one app, and it adds a study system that decides what to practice next.</p>
+    </section>
+
+    <section id="guide">
+      <p class="kicker">New: The Guide</p>
+      <h2>A study partner for your whole response area</h2>
+      <p class="intro">The Guide teaches every run in the district, starting from quarters. It borrows the method London cab drivers use to learn their city, called "the Knowledge": you call runs over out loud, check yourself turn by turn, drive them, and go look at the ground.</p>
+
+      <div class="stats">
+        <div class="stat"><b>793</b><span>places across the 3rd Battalion and the 2nd Battalion edges</span></div>
+        <div class="stat"><b>654</b><span>with a run card, copied word for word from the book</span></div>
+        <div class="stat"><b>10</b><span>local alarm districts to choose from</span></div>
+        <div class="stat"><b>~3 min</b><span>for a Daily 5</span></div>
+      </div>
+
+      <div class="shots">
+        <figure><img src="img/guide-home.jpg" alt="The Guide home"><figcaption>The Guide opens to today's work: what's due, what's new, and the drills.</figcaption></figure>
+        <figure><img src="img/daily5-card.jpg" alt="Daily 5 Call it over card"><figcaption><b>Call it over.</b> Say the run from memory, then check it against the card from the book.</figcaption></figure>
+        <figure><img src="img/daily5-almost.jpg" alt="Daily 5 result marked Almost with the turn to work on"><figcaption>Miss a turn and the Guide names it. That run comes back sooner.</figcaption></figure>
+        <figure><img src="img/wide-guide.jpg" alt="The Guide on a larger screen"><figcaption>On larger screens the drills sit side by side, with your progress through the book below.</figcaption></figure>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Spaced practice, not cramming</h3>
+          <p>Runs you miss come back soon. Runs you know come back less often. Due runs come first each day, then a couple of new ones, so the whole district gets covered over time.</p>
+        </div>
+        <div class="card">
+          <h3>Your ground, your pace</h3>
+          <p>Pick which districts to study, starting with your own first-due. Progress shows per district and per street in the book. There are no streaks or points.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="drills">
+      <p class="kicker">The drills</p>
+      <h2>Six ways to learn the same ground</h2>
+
+      <div class="feature">
+        <img src="img/daily5-card.jpg" alt="Daily 5">
+        <div>
+          <span class="tag">Daily 5</span>
+          <h3>Five quick runs a day</h3>
+          <p>Due runs first, then something new. Each one is called over out loud and checked turn by turn against the book's own wording. A good fit for the start of a shift or the end of one.</p>
+        </div>
+      </div>
+
+      <div class="feature pair">
+        <img src="img/arcade-drive.jpg" alt="Driving a practice run in the Arcade">
+        <img src="img/arcade-scene.jpg" alt="On scene result with time and distance">
+        <div>
+          <span class="tag">Drive Night</span>
+          <h3>Three runs in the Arcade</h3>
+          <p>Straight into the truck with no menus. Route help fades after you've driven a run twice. Places with no run card become find-your-own-way drives. You get a debrief after each run.</p>
+        </div>
+      </div>
+
+      <div class="feature pair">
+        <img src="img/where-am-i.jpg" alt="Where Am I? street-level photo with no signs">
+        <img src="img/look-around.jpg" alt="Apple Look Around at the answer corner">
+        <div>
+          <span class="tag">Where Am I?</span>
+          <h3>You just pulled up. No street signs.</h3>
+          <p>A street-level photo with the labels hidden. Name the corner or the block, then look around the real intersection to see what you missed: the plug, the access, the way out.</p>
+        </div>
+      </div>
+
+      <div class="feature pair">
+        <img src="img/pin-it-drop.jpg" alt="Pin It satellite map with no labels">
+        <img src="img/pin-it-answer.jpg" alt="Pin It answer showing the distance from the pin">
+        <div>
+          <span class="tag">Pin It</span>
+          <h3>Drop the pin. No labels.</h3>
+          <p>Satellite imagery only, with no street names. Start from quarters, pan and zoom, and put the pin where the corner is. The answer shows how far off you were and in which direction.</p>
+        </div>
+      </div>
+
+      <div class="feature pair">
+        <img src="img/blocks-answer.jpg" alt="Blocks question: which two streets bound the 2000 block">
+        <img src="img/blocks-map.jpg" alt="See the blocks map comparing the right block with the pick">
+        <div>
+          <span class="tag">Blocks</span>
+          <h3>Which two streets?</h3>
+          <p>A hundred block is named; you pick the cross streets. "See the blocks" draws the block that was asked next to the one you picked, so the correction is on the map, not just in a sentence.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <img src="img/water.jpg" alt="Water drill: pick the closest hydrant">
+        <div>
+          <span class="tag">Water</span>
+          <h3>You're first due. Where's your closest plug?</h3>
+          <p>Pick the nearest hydrant from a short list, with distances shown on the answer. The app says plainly that the hydrant is a GIS record and has not been checked in person.</p>
+        </div>
+      </div>
+
+      <h2>Every answer leads back to the ground</h2>
+      <div class="feature">
+        <img src="img/on-the-map.jpg" alt="Lesson location on the Box Alarm map with Back to the lesson and Run it in the Arcade buttons">
+        <div>
+          <p>From any lesson you can step out to check your work and come straight back.</p>
+          <ul>
+            <li><b>Look at the box</b> opens street-level imagery at the location.</li>
+            <li><b>On the map</b> shows it on the Box Alarm map with hydrants, block numbers and one-way streets.</li>
+            <li><b>Run it in the Arcade</b> drives it from quarters.</li>
+            <li><b>Back to the lesson</b> is always one tap away.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="map">
+      <p class="kicker">Live map</p>
+      <h2>The district, drawn for fire service work</h2>
+      <p class="intro">The home screen is a map of all of DC built for firefighters, not drivers. It is drawn from DC open data and the department's own references, with each layer traced to its source.</p>
+      <div class="shots">
+        <figure><img src="img/live-dc.jpg" alt="Citywide map with local alarm areas and firehouse labels"><figcaption>Local alarm areas for every company, with firehouses labeled by the units in quarters.</figcaption></figure>
+        <figure><img src="img/call-map.jpg" alt="Close-up map with hydrants and block numbers"><figcaption>Hydrants, hundred-block numbers, one-way arrows, buildings and alleys.</figcaption></figure>
+        <figure><img src="img/live-3d.jpg" alt="3D map following your location"><figcaption>Follow your location in 3D, or browse without losing your place.</figcaption></figure>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>What's on it</h3>
+          <ul>
+            <li>Local alarm areas and battalions</li>
+            <li>Hydrants with their recorded flow</li>
+            <li>Fire alarm boxes and company routes</li>
+            <li>Block numbers and one-way streets</li>
+            <li>Buildings, parking and alleys, plus a satellite view</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Field notebook</h3>
+          <p>Hold a place on the map to save a pin with a note or photo: a hidden standpipe, a tricky access, a bad turn. Pins and notes stay on your device.</p>
+          <p>Search any DC address and see whose local alarm it's in.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="arcade">
+      <p class="kicker">Take Your Runs</p>
+      <h2>Drive the run before you ride it</h2>
+      <p class="intro">The Arcade is a top-down driving simulator on real DC streets. You start in the bay at quarters and drive to a real box or address, with the run card's turns as your guide.</p>
+      <div class="shots">
+        <figure><img src="img/arcade-menu.jpg" alt="Take Your Runs menu with company and modes"><figcaption>Choose your company and how much help you want.</figcaption></figure>
+        <figure><img src="img/arcade-drive.jpg" alt="Driving with on-screen controls"><figcaption>Large on-screen controls, or a keyboard on iPad.</figcaption></figure>
+        <figure><img src="img/arcade-scene.jpg" alt="On scene result"><figcaption>Time, distance and a personal best for each run.</figcaption></figure>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>Four modes</h3>
+          <ul>
+            <li><b>Guided Run</b>: the book's turns, step by step.</li>
+            <li><b>Run</b>: start at quarters and find your own way.</li>
+            <li><b>Out &amp; About</b>: start from wherever you are.</li>
+            <li><b>Tech Test</b>: no help at all, then pass or fail with every missed turn named.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Real streets, checked</h3>
+          <p>About 3,900 guided routes across the 3rd Battalion and its neighbors. Every route is checked so the truck can actually reach the box. Routes that can't be verified are held back, not guessed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="board">
+      <p class="kicker">Runs on the board</p>
+      <h2>Turn real calls into practice</h2>
+      <p class="intro">Recent calls for your units arrive on the board. Open one to see whose local alarm it's in, look at it on the map, and run it from your own quarters.</p>
+      <div class="shots">
+        <figure><img src="img/board.jpg" alt="Runs on the board with sample calls"><figcaption>Recent calls, filtered by unit and battalion. Members join with Sign in with Apple and are approved by the board owner.</figcaption></figure>
+        <figure><img src="img/run-the-call.jpg" alt="Call map with Run the call button"><figcaption>The full call map, with one button to drive it from your quarters.</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <p class="kicker">Built for every screen</p>
+      <h2>iPhone and iPad</h2>
+      <div class="wide">
+        <img src="img/wide-live.jpg" alt="Live map with the side panel on a larger screen">
+        <div class="card" style="margin:0">
+          <p>On larger screens the map and the controls sit side by side. On iPad you can drive the Arcade with a keyboard. A Mac version is in testing.</p>
+          <p class="muted">Screenshots are from the current private beta and test builds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust">
+      <p class="kicker">How it's built</p>
+      <h2>Accurate first, or it doesn't ship</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>The book's own words</h3>
+          <p>Route wording is copied exactly from the company information book, and every card links back to its source. The Guide never makes up a route or a building detail.</p>
+        </div>
+        <div class="card">
+          <h3>Honest labels</h3>
+          <p>When something comes from a records system rather than a check in the field, the app says so. If the street disagrees with the record, the street wins.</p>
+        </div>
+        <div class="card">
+          <h3>Tested data</h3>
+          <p>Hundreds of automated checks cover the map, the routes and the study rules. Each company book is extracted twice independently and every disagreement is reviewed.</p>
+        </div>
+        <div class="card">
+          <h3>Private by default</h3>
+          <p>Pins, notes and photos are stored on your device, and you can export or delete them from Settings. Sign in with Apple only confirms who is asking to join the board; Box Alarm doesn't receive your email or Apple ID.</p>
+        </div>
+      </div>
+
+      <div class="card limits">
+        <h3>What Box Alarm is not</h3>
+        <p>Box Alarm is a learning tool. It is not dispatch, live incident status or approved response routing. It is an independent project built by a DC Fire and EMS member, not an official department product.</p>
+      </div>
+
+      <h2>Bring your company's book</h2>
+      <p>The Guide is built around Engine 15 today. The same system can be set up for any company with an information book. If you'd like it for your house, get in touch: <a href="mailto:61.baroque.finial@icloud.com">61.baroque.finial@icloud.com</a>.</p>
+    </section>
+
+    <section id="join">
+      <p class="kicker">Private beta</p>
+      <h2>Sign up for TestFlight</h2>
+      <p class="intro">Box Alarm is in a private beta for DC Fire and EMS members. Fill this in and Anthony will send you a TestFlight invitation.</p>
+      <form class="card signup" id="signup" novalidate>
+        <label for="su-name">Name</label>
+        <input id="su-name" name="name" autocomplete="name" placeholder="e.g. FF Jane Smith" required>
+        <label for="su-assignment">Assignment</label>
+        <input id="su-assignment" name="assignment" placeholder="e.g. Engine 15, B shift" required>
+        <label for="su-email">Personal email for your Apple Account</label>
+        <input id="su-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="the email you use for the App Store" required>
+        <p class="hint">TestFlight sends the invitation to this address, so use the email you sign in to the App Store with. Please don't use a department email.</p>
+        <p class="error" id="su-error" role="alert" hidden></p>
+        <a class="send" id="su-send" href="mailto:61.baroque.finial@icloud.com">Send my sign-up</a>
+        <p class="hint">This opens your email app with everything filled in. Tap <b>Send</b> to finish. Your details go only to Anthony and are used only for the TestFlight invitation.</p>
+      </form>
+      <div class="card signup-done" id="signup-done" hidden>
+        <h3>Almost done: tap Send in your email app</h3>
+        <p>If your email app didn't open, copy this and email it to <b>61.baroque.finial@icloud.com</b>:</p>
+        <pre id="su-text"></pre>
+        <button type="button" id="su-copy">Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Anthony Srebnick · <a href="mailto:61.baroque.finial@icloud.com">Contact</a> · <a href="../index.html">Tone Out</a></footer>
+
+  <dialog class="zoom" id="zoom"><img alt=""></dialog>
+  <script>
+    const zoom = document.getElementById('zoom');
+    const big = zoom.querySelector('img');
+    document.querySelectorAll('main img').forEach(img => {
+      img.loading = 'lazy';
+      img.addEventListener('click', () => { big.src = img.src; big.alt = img.alt; zoom.showModal(); });
+    });
+    zoom.addEventListener('click', () => zoom.close());
+
+    const to = '61.baroque.finial@icloud.com';
+    const form = document.getElementById('signup');
+    const err = document.getElementById('su-error');
+    const send = document.getElementById('su-send');
+    // A real link the person taps is what iPhone Safari reliably opens in Mail.
+    function draft() {
+      const name = form.name.value.trim(), assignment = form.assignment.value.trim(), email = form.email.value.trim();
+      let problem = '';
+      if (!name) problem = 'Please enter your name.';
+      else if (!assignment) problem = 'Please enter your assignment.';
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) problem = 'Please enter a valid email address.';
+      const body = `Box Alarm TestFlight sign-up\n\nName: ${name}\nAssignment: ${assignment}\nApple Account email: ${email}\n`;
+      send.href = `mailto:${to}?subject=${encodeURIComponent('Box Alarm TestFlight sign-up: ' + name)}&body=${encodeURIComponent(body)}`;
+      return { problem, body };
+    }
+    form.addEventListener('input', () => { draft(); err.hidden = true; });
+    send.addEventListener('click', e => {
+      const { problem, body } = draft();
+      err.textContent = problem; err.hidden = !problem;
+      if (problem) { e.preventDefault(); return; }
+      document.getElementById('su-text').textContent = body;
+      document.getElementById('signup-done').hidden = false;
+    });
+    form.addEventListener('submit', e => { e.preventDefault(); send.click(); });
+    document.getElementById('su-copy').addEventListener('click', e => {
+      const text = document.getElementById('su-text').textContent;
+      navigator.clipboard.writeText(text).then(() => { e.target.textContent = 'Copied'; }, () => {});
+    });
+  </script>
+</body>
+</html>
